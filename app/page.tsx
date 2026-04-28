@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 
-const TARGET = new Date("2026-05-01T06:00:00");
+const TARGET = new Date("2026-05-01T00:00:00");
 
 function getTimeLeft() {
   const now = new Date();
   const diff = TARGET.getTime() - now.getTime();
-  // if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, done: true };
+  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, done: true };
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
@@ -210,7 +210,7 @@ export default function Counter() {
               color: "#fff",
               lineHeight: 0.95,
             }}>
-              MEET YOU
+              See you in
             </h1>
           </div>
 
@@ -225,7 +225,7 @@ export default function Counter() {
               textShadow: "0 0 30px rgba(107,203,119,0.6)",
               textAlign: "center",
             }}>
-              🎉 It's Friday!
+              🎉 It's D-Day!
             </div>
           ) : (
             <div className="rings-grid">
