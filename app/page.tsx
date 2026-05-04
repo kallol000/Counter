@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const TARGET = new Date("2026-05-01T18:00:00");
+const TARGET = new Date("2026-05-11T12:00:00");
 
 function getTimeLeft() {
   const now = new Date();
